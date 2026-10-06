@@ -1,0 +1,64 @@
+/* 1. Box sizing reset para madaling mag-layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Tanggalin ang default margin at iready ang body */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 3. Siguraduhing responsive ang mga images at media */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 4. Tanggalin ang default font styling sa form elements */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 5. Ayusin ang text overflow sa long words */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 6. Tanggalin ang default list style */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 7. Ayusin ang default link style */
+a {
+  text-decoration: none;
+  color: inherit;
+}

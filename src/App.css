@@ -1,0 +1,130 @@
+/* Full Viewport Centering */
+html, body, #root {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  /* Dark overlay layered on top of greenbackground.jpg */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('./assets/greenbackground.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Simple Header */
+.Header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #00ff87;
+  text-shadow: 0 0 8px rgba(0, 255, 135, 0.6);
+  margin-bottom: 15px;
+}
+
+.Header::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url('./assets/Green_lantern.png') no-repeat center/contain;
+}
+
+/* White Calculator Shell */
+.Calculator {
+  width: 320px;
+  padding: 20px;
+  background: #ffffffd3;
+  border-radius: 16px;
+  border: 2px solid #00ff87;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Retained Dark Screen Display */
+.CalcDisplay {
+  border: 1px solid #00ff87;
+  border-radius: 8px;
+  height: 50px;
+  font-size: 1.8em;
+  font-family: monospace;
+  line-height: 50px;
+  padding: 0 12px;
+  text-align: right;
+  background: #04120a;
+  color: #00ff87;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+/* Grid Layout */
+.CalcButtons {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Retained Dark Green Buttons */
+.CalcButton {
+  height: 55px;
+  border: 1px solid #00ff87;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #00ff87;
+  background: #0f3020;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.CalcButton:hover {
+  background: #00ff87;
+  color: #000;
+}
+
+.CalcButton:active {
+  transform: scale(0.96);
+}
+
+/* Retained Dark Red Clear Button */
+.ClearButton {
+  height: 55px;
+  border: 1px solid #ff334b;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ff334b;
+  background: #330f14;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.ClearButton:hover {
+  background: #ff334b;
+  color: #ffffff9c;
+}
+
+.ClearButton:active {
+  transform: scale(0.96);
+}
