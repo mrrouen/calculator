@@ -45,12 +45,12 @@ function App() {
           <CalcButton label={'4'} onClick={handleButtonClick} />
           <CalcButton label={'5'} onClick={handleButtonClick} />
           <CalcButton label={'6'} onClick={handleButtonClick} />
-          <CalcButton label={'X'} onClick={handleButtonClick} />
+          <CalcButton label={'*'} onClick={handleButtonClick} />
           <CalcButton label={'1'} onClick={handleButtonClick} />
           <CalcButton label={'2'} onClick={handleButtonClick} />
           <CalcButton label={'3'} onClick={handleButtonClick} />
           <CalcButton label={'-'} onClick={handleButtonClick} />
-          <CalcButton label={'CLR'} buttonClassName={"ClearButton"} onClick={handleButtonClick} />
+          <CalcButton label={'C'} buttonClassName={"ClearButton"} onClick={handleButtonClick} />
           <CalcButton label={'0'} onClick={handleButtonClick} />
           <CalcButton label={'='} onClick={handleButtonClick} />
           <CalcButton label={'+'} onClick={handleButtonClick} />

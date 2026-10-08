@@ -1,8 +1,8 @@
-/* 1. Box sizing reset para madaling mag-layout */
+/* 1. Box sizing reset (Inayos din ang typo mula border-border-box) */
 *,
 *::before,
 *::after {
-  box-sizing: border-border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -61,4 +61,39 @@ ol {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* 8. I-disable ang animations para sa mga user na may prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 9. Ayusin ang cursor at interactivity para sa mga clickable elements */
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* 10. Tagong-tago ang hidden elements at ayusin ang root stacking context */
+[hidden] {
+  display: none !important;
+}
+
+#root {
+  isolation: isolate;
 }
