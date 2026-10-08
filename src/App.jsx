@@ -22,7 +22,7 @@ function App() {
   const [disp, setDisp] = useState("0");
 
   const handleButtonClick = (value) => {
-    if (value === 'CLR') {
+    if (value === 'C') {
       setDisp("0");
     } else {
 
